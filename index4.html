@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Promotion | Milky Mellow</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #f6f9fc;
+    color: #526e8b;
+}
+
+header {
+    background: #fff;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    color: #7196ba;
+    font-family: 'Itim', cursive;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #a1b6cc;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #e5f0fa;
+    padding: 14px 8px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #6483a1;
+    background: white;
+    padding: 11px 21px;
+    margin: 4px;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #739bc2;
+    color: white;
+}
+
+/* HERO */
+.hero {
+    min-height: 340px;
+    background:
+        radial-gradient(circle at 10% 20%, #ffffff 0 45px, transparent 46px),
+        radial-gradient(circle at 90% 80%, #c7def2 0 75px, transparent 76px),
+        linear-gradient(125deg,#dceafa,#edf5fc,#d4e6f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 55px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "♡";
+    position: absolute;
+    left: 8%;
+    top: 45px;
+    font-size: 85px;
+    color: #ffffff99;
+}
+
+.hero::after {
+    content: "✧";
+    position: absolute;
+    right: 9%;
+    bottom: 25px;
+    font-size: 90px;
+    color: #ffffffaa;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 8px 22px;
+    background: #ffffffa8;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: #7296b9;
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.hero h2 {
+    font-family: 'Itim', cursive;
+    color: #557da4;
+    font-size: clamp(38px,6vw,65px);
+    margin: 20px 0 5px;
+    line-height: 1.15;
+}
+
+.hero h3 {
+    color: #7598b9;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    color: #829db7;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 55px 15px 35px;
+}
+
+.intro .eyebrow {
+    color: #91adc9;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.intro h2 {
+    color: #5f83a7;
+    font-family: 'Itim', cursive;
+    font-size: 35px;
+    margin: 12px 0;
+}
+
+.intro p {
+    color: #8ba3bb;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* SET CONTAINER */
+.set-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 15px 22px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+/* SET CARD */
+.set-card {
+    background: white;
+    border-radius: 23px;
+    overflow: hidden;
+    border: 1px solid #e0eaf4;
+    box-shadow: 0 8px 28px #dce7f1;
+    transition: .35s;
+}
+
+.set-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px #c9dbea;
+}
+
+/* PHOTOS */
+.photo-area {
+    height: 275px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    background: #dceaf7;
+    padding: 7px;
+    position: relative;
+}
+
+.photo-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.set-badge {
+    position: absolute;
+    top: 19px;
+    left: 18px;
+    background: #ffffffed;
+    color: #648bb1;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 10px #839bb344;
+}
+
+/* CARD DETAILS */
+.details {
+    padding: 24px 27px 27px;
+}
+
+.set-number {
+    color: #9bb6d0;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+.details h3 {
+    color: #547ba1;
+    font-family: 'Itim', cursive;
+    font-size: 29px;
+    margin: 8px 0;
+}
+
+.description {
+    color: #899fb5;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* PRICE */
+.price-box {
+    margin-top: 20px;
+    background: #f0f6fc;
+    border-radius: 15px;
+    padding: 15px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-info small {
+    display: block;
+    color: #9aafc4;
+    font-size: 12px;
+}
+
+.old-price {
+    color: #aebbc9;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+.new-price {
+    color: #557fa7;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.discount {
+    background: #dceafa;
+    color: #6189b0;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* BUTTON */
+.order-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: #759dc3;
+    padding: 13px;
+    border-radius: 30px;
+    margin-top: 17px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.order-button:hover {
+    background: #557fa7;
+    letter-spacing: 1px;
+}
+
+/* BOTTOM BANNER */
+.bottom {
+    margin: 0 auto 65px;
+    max-width: 1075px;
+    background: linear-gradient(120deg,#d8eafa,#edf5fc);
+    padding: 42px 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.bottom h2 {
+    color: #5b80a5;
+    font-family: 'Itim', cursive;
+    font-size: 34px;
+}
+
+.bottom p {
+    color: #809ab5;
+    margin-top: 12px;
+    line-height: 1.9;
+}
+
+/* FOOTER */
+footer {
+    background: #b6d0e9;
+    color: white;
+    text-align: center;
+    padding: 32px 15px;
+    line-height: 2;
+}
+
+footer h2 {
+    font-family: 'Itim', cursive;
+    font-size: 29px;
+}
+
+/* MOBILE */
+@media(max-width:700px) {
+    .set-container {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+
+    .photo-area {
+        height: 240px;
+    }
+
+    .hero h3 {
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    nav a {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>♡ Milky Mellow Cafe ♡</h1>
+    <p>SWEET MOMENTS, HAPPY DAYS</p>
+</header>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="menu.html">MENU</a>
+    <a href="about.html">ABOUT</a>
+    <a href="promotion.html" class="active">PROMOTION</a>
+    <a href="contact.html">CONTACT</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="hero-label">
+            A SPECIAL TREAT FOR YOU
+        </span>
+
+        <h2>Couple Set Collection ♡</h2>
+
+        <h3>BETTER TOGETHER, SWEETER FOREVER</h3>
+
+        <p>
+            เครื่องดื่มแก้วโปรดกับขนมชิ้นพิเศษ<br>
+            จับคู่ความอร่อยในราคาที่น่ารักกว่าเดิม
+        </p>
+
+    </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+
+    <p class="eyebrow">MADE FOR TWO</p>
+
+    <h2>Our Special Sets</h2>
+
+    <p>
+        4 เซตสุดพิเศษที่เราเลือกจับคู่มาให้คุณ<br>
+        จะมากับเพื่อน คนพิเศษ หรือให้รางวัลตัวเองก็ได้ ♡
+    </p>
+
+</section>
+
+<!-- FOUR SETS -->
+<section class="set-container">
+
+    <!-- SET 01 -->
+    <article class="set-card">
+
+        <div class="photo-area">
+
+            <img src="images/bluelatte.jpg" alt="Blue Latte">
+
+            <img src="images/toast.jpg" alt="French Toast">
+
+            <span class="set-badge">BEST SELLER ♡</span>
+
+        </div>
+
+        <div class="details">
+
+            <span class="set-number">COUPLE SET / 01</span>
+
+            <h3>Blue Morning</h3>
+
+            <p class="description">
+                Blue Latte + French Toast<br>
+                บลูลัตเต้ครีมนุ่ม คู่กับเฟรนช์โทสต์ผลไม้
+            </p>
+
+            <div class="price-box">
+
+                <div class="price-info">
+                    <small>ราคาพิเศษ</small>
+                    <span class="old-price">159 บาท</span>
+                    <div class="new-price">129.-</div>
+                </div>
+
+                <span class="discount">SAVE 30.-</span>
+
+            </div>
+
+            <a href="contact.html" class="order-button">
+                ORDER THIS SET　♡
+            </a>
+
+        </div>
+    </article>
+
+    <!-- SET 02 -->
+    <article class="set-card">
+
+        <div class="photo-area">
+
+            <img src="images/blue.jpg" alt="Blue Drink">
+
+            <img src="images/cake.jpg" alt="Blueberry Cake">
+
+            <span class="set-badge">SWEET COMBO</span>
+
+        </div>
+
+        <div class="details">
+
+            <span class="set-number">COUPLE SET / 02</span>
+
+            <h3>Blue Dream</h3>
+
+            <p class="description">
+                Blue Drink + Blueberry Cake<br>
+                เครื่องดื่มสีฟ้าสดชื่น คู่กับชีสเค้กบลูเบอร์รี
+            </p>
+
+            <div class="price-box">
+
+                <div class="price-info">
+                    <small>ราคาพิเศษ</small>
+                    <span class="old-price">174 บาท</span>
+                    <div class="new-price">139.-</div>
+                </div>
+
+                <span class="discount">SAVE 35.-</span>
+
+            </div>
+
+            <a href="contact.html" class="order-button">
+                ORDER THIS SET　♡
+            </a>
+
+        </div>
+    </article>
+
+    <!-- SET 03 -->
+    <article class="set-card">
+
+        <div class="photo-area">
+
+            <img src="images/bluelatte.jpg" alt="Blue Latte">
+
+            <img src="images/cake2.jpg" alt="Blueberry Cheesecake">
+
+            <span class="set-badge">CUSTOMER FAVORITE</span>
+
+        </div>
+
+        <div class="details">
+
+            <span class="set-number">COUPLE SET / 03</span>
+
+            <h3>Sweet Blue</h3>
+
+            <p class="description">
+                Blue Latte + Blueberry Cheesecake<br>
+                บลูลัตเต้ละมุน คู่กับชีสเค้กบลูเบอร์รี
+            </p>
+
+            <div class="price-box">
+
+                <div class="price-info">
+                    <small>ราคาพิเศษ</small>
+                    <span class="old-price">174 บาท</span>
+                    <div class="new-price">149.-</div>
+                </div>
+
+                <span class="discount">SAVE 25.-</span>
+
+            </div>
+
+            <a href="contact.html" class="order-button">
+                ORDER THIS SET　♡
+            </a>
+
+        </div>
+    </article>
+
+    <!-- SET 04 -->
+    <article class="set-card">
+
+        <div class="photo-area">
+
+            <img src="images/blue.jpg" alt="Blue Drink">
+
+            <img src="images/toast.jpg" alt="French Toast">
+
+            <span class="set-badge">GOOD CHOICE</span>
+
+        </div>
+
+        <div class="details">
+
+            <span class="set-number">COUPLE SET / 04</span>
+
+            <h3>Happy Day</h3>
+
+            <p class="description">
+                Blue Drink + French Toast<br>
+                เครื่องดื่มสีฟ้า คู่กับเฟรนช์โทสต์ผลไม้
+            </p>
+
+            <div class="price-box">
+
+                <div class="price-info">
+                    <small>ราคาพิเศษ</small>
+                    <span class="old-price">144 บาท</span>
+                    <div class="new-price">129.-</div>
+                </div>
+
+                <span class="discount">SAVE 15.-</span>
+
+            </div>
+
+            <a href="contact.html" class="order-button">
+                ORDER THIS SET　♡
+            </a>
+
+        </div>
+    </article>
+
+</section>
+
+<!-- ENDING -->
+<section class="bottom">
+
+    <h2>A Little Treat, A Lot of Happiness ♡</h2>
+
+    <p>
+        Share your favorite moments with Milky Mellow.<br>
+        ให้ทุกช่วงเวลาหวานกว่าที่เคย
+    </p>
+
+</section>
+
+<footer>
+
+    <h2>♡ Milky Mellow Cafe ♡</h2>
+
+    <p>Sweet Moments, Happy Days</p>
+
+    <p>OPEN DAILY : 09:00 - 18:00</p>
+
+    <p>© 2026 Milky Mellow Cafe</p>
+
+</footer>
+
+</body>
+</html>

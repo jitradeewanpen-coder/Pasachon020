@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milky Mellow Cafe</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f9ff;
+    color: #526f91;
+}
+
+/* HEADER */
+header {
+    background: white;
+    padding: 22px;
+    text-align: center;
+}
+
+header h1 {
+    color: #729bc5;
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #9bb7d5;
+    margin-top: 7px;
+    font-size: 14px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #dcecff;
+    padding: 15px 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 10px #d3e4f3;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #6385a9;
+    background: white;
+    padding: 12px 24px;
+    margin: 4px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #78a4d0;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* HERO BANNER */
+.hero {
+    text-align: center;
+    padding: 35px 15px 20px;
+    background: linear-gradient(
+        180deg,
+        #e3f1ff,
+        #f3f9ff
+    );
+}
+
+.hero img {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 22px;
+    border: 5px solid white;
+    box-shadow: 0 8px 25px #c5d9ed;
+}
+
+/* WELCOME */
+.welcome {
+    text-align: center;
+    padding: 35px 15px 45px;
+}
+
+.welcome .small-title {
+    color: #91b3d7;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.welcome h2 {
+    color: #6289b5;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.welcome p {
+    color: #809bb8;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.main-button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 13px 32px;
+    border-radius: 30px;
+    background: #79a6d1;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 12px #c7dbee;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #547da8;
+    transform: translateY(-3px);
+}
+
+/* DECORATION */
+.divider {
+    text-align: center;
+    color: #9bb9d8;
+    font-size: 22px;
+    padding: 10px;
+}
+
+/* PRODUCT SECTION */
+.products {
+    padding: 45px 6%;
+    background: white;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    color: #678db7;
+}
+
+.section-heading p {
+    margin-top: 10px;
+    color: #9ab0c9;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.product-card {
+    background: #f4f9ff;
+    border: 2px solid #d9e9f8;
+    border-radius: 20px;
+    padding: 13px;
+    text-align: center;
+    box-shadow: 0 5px 15px #e1edf8;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 22px #c9dff2;
+}
+
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.product-card h3 {
+    color: #6289b5;
+    margin: 15px 0 7px;
+    font-size: 18px;
+}
+
+.product-card p {
+    color: #8ba6c1;
+    font-size: 14px;
+    padding-bottom: 12px;
+}
+
+/* ABOUT MINI SECTION */
+.about {
+    padding: 55px 15px;
+    text-align: center;
+    background: #e9f4ff;
+}
+
+.about-box {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 25px;
+    border: 2px solid #d5e8f9;
+    box-shadow: 0 5px 18px #d6e7f6;
+}
+
+.about h2 {
+    color: #648bb6;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    line-height: 2;
+    color: #819bb6;
+}
+
+/* OPENING TIME */
+.opening {
+    background: white;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.opening-box {
+    max-width: 550px;
+    margin: auto;
+    background: #edf6ff;
+    border: 2px dashed #a7c5e3;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.opening h2 {
+    color: #638bb6;
+    margin-bottom: 12px;
+}
+
+.opening p {
+    line-height: 2;
+    color: #829fbc;
+}
+
+/* FOOTER */
+footer {
+    background: #b9d3ed;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+}
+
+footer h2 {
+    color: white;
+    font-size: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 750px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .product-card img {
+        height: 170px;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>♡ Milky Mellow Cafe ♡</h1>
+    <p>Sweet Moments, Happy Days</p>
+</header>
+
+<!-- MENU BUTTONS -->
+<nav>
+    <a href="#home">⌂ HOME</a>
+    <a href="#menu">☕ MENU</a>
+    <a href="#about">♡ ABOUT</a>
+    <a href="#promotion">🎁 PROMOTION</a>
+    <a href="#contact">✉ CONTACT</a>
+</nav>
+
+<!-- MAIN BANNER -->
+<section class="hero" id="home">
+    <img src="images/banner.jpg"
+         alt="Milky Mellow Cafe Banner">
+</section>
+
+<!-- WELCOME -->
+<section class="welcome">
+
+    <p class="small-title">
+        WELCOME TO OUR CAFE
+    </p>
+
+    <h2>A Little Happiness in Every Sip ♡</h2>
+
+    <p>
+        ยินดีต้อนรับสู่ Milky Mellow Cafe<br>
+        คาเฟ่เล็ก ๆ ที่เต็มไปด้วยความสุขและความสดใส<br>
+        ให้ทุกวันของคุณเป็นวันที่แสนพิเศษ
+    </p>
+
+    <a href="#menu" class="main-button">
+        DISCOVER OUR MENU ♡
+    </a>
+
+</section>
+
+<div class="divider">
+    ✧ ─────── ♡ ─────── ✧
+</div>
+
+<!-- FAVORITE MENU -->
+<section class="products" id="menu">
+
+    <div class="section-heading">
+        <h2>♡ Our Favorites ♡</h2>
+        <p>เมนูแนะนำจาก Milky Mellow</p>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="images/cake.jpg"
+                 alt="Blueberry Cheesecake">
+            <h3>Blueberry Cheesecake</h3>
+            <p>ชีสเค้กบลูเบอร์รีแสนอร่อย</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/cookie.jpg"
+                 alt="Blue Cookies">
+            <h3>Blue Cookies</h3>
+            <p>คุกกี้ช็อกโกแลตสีฟ้า</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/lemonblue.jpg"
+                 alt="Blue Lemon Soda">
+            <h3>Blue Lemon Soda</h3>
+            <p>เลมอนโซดาสดชื่น</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/blue.jpg"
+                 alt="Blue Milk">
+            <h3>Blue Milk</h3>
+            <p>เครื่องดื่มนมสีฟ้า</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/bluelatte.jpg"
+                 alt="Blue Latte">
+            <h3>Blue Latte</h3>
+            <p>ลาเต้ครีมนุ่มละมุน</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/toast.jpg"
+                 alt="French Toast">
+            <h3>French Toast</h3>
+            <p>ขนมปังปิ้งผลไม้แสนอร่อย</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-box">
+
+        <h2>♡ About Milky Mellow ♡</h2>
+
+        <p>
+            Milky Mellow Cafe คือคาเฟ่ที่อยากส่งต่อ
+            ความสุขผ่านเครื่องดื่มและขนมหวาน<br>
+            เราใส่ใจในทุกรายละเอียด
+            เพื่อให้ทุกครั้งที่คุณแวะมาเต็มไปด้วยรอยยิ้ม
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PROMOTION -->
+<section class="opening" id="promotion">
+
+    <div class="opening-box">
+
+        <h2>🎀 Special Moments 🎀</h2>
+
+        <p>
+            พบกับเครื่องดื่มและขนมแสนอร่อย<br>
+            พร้อมช่วงเวลาดี ๆ ที่ Milky Mellow
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="opening" id="contact">
+
+    <div class="opening-box">
+
+        <h2>♡ Visit Our Cafe ♡</h2>
+
+        <p>
+            Open Daily<br>
+            09:00 - 18:00<br>
+            Come and enjoy your happy days!
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>♡ Milky Mellow Cafe ♡</h2>
+
+    <p>Sweet Moments, Happy Days</p>
+
+    <p>Thank you for visiting our little cafe ♡</p>
+
+    <p>© 2026 Milky Mellow Cafe</p>
+
+</footer>
+
+</body>
+</html>

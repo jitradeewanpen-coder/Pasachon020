@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Milky Mellow Cafe</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: #f1f7fd;
+    color: #587b9c;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 25px;
+    background: white;
+}
+
+header h1 {
+    font-family: 'Itim', cursive;
+    font-size: 35px;
+    color: #7199bf;
+}
+
+header p {
+    color: #a0b6cd;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* CONTACT BANNER */
+.hero {
+    background: linear-gradient(135deg,#d7eaff,#f4f9ff,#d6e8f8);
+    text-align: center;
+    padding: 65px 15px;
+}
+
+.hero small {
+    letter-spacing: 5px;
+    color: #85a9cc;
+}
+
+.hero h2 {
+    font-family: 'Itim', cursive;
+    font-size: 52px;
+    color: #5f86ad;
+    margin: 15px 0;
+}
+
+.hero p {
+    line-height: 2;
+    color: #829db7;
+}
+
+/* CONTACT TITLE */
+.heading {
+    text-align: center;
+    padding: 45px 15px 25px;
+}
+
+.heading h2 {
+    font-family: 'Itim', cursive;
+    font-size: 32px;
+    color: #638ab3;
+}
+
+.heading p {
+    color: #91a9c0;
+    margin-top: 10px;
+}
+
+/* CONTACT CARDS */
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    border: 1px solid #dceafa;
+    box-shadow: 0 6px 20px #dce8f3;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    background: #e6f2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #648bb4;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #8aa3bc;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.card a {
+    color: #729bc2;
+    text-decoration: none;
+}
+
+/* OPENING HOURS */
+.hours {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    padding: 35px 20px;
+    text-align: center;
+    border-radius: 25px;
+    background: linear-gradient(120deg,#d8eafa,#eef6ff);
+}
+
+.hours h2 {
+    font-family: 'Itim', cursive;
+    font-size: 30px;
+    color: #5d84aa;
+    margin-bottom: 18px;
+}
+
+.hours-box {
+    background: white;
+    max-width: 450px;
+    margin: auto;
+    padding: 22px;
+    border-radius: 18px;
+}
+
+.hours-box p {
+    color: #819bb5;
+    line-height: 2;
+}
+
+.hours-box strong {
+    color: #638bb4;
+    font-size: 20px;
+}
+
+/* BOTTOM */
+.bottom {
+    text-align: center;
+    padding: 40px 15px 55px;
+}
+
+.bottom h2 {
+    font-family: 'Itim', cursive;
+    font-size: 32px;
+    color: #638ab3;
+}
+
+.bottom p {
+    color: #8ba5bf;
+    margin-top: 12px;
+    line-height: 2;
+}
+
+/* FOOTER */
+footer {
+    background: #b7d2eb;
+    text-align: center;
+    padding: 28px;
+    color: white;
+    line-height: 2;
+}
+
+footer h2 {
+    font-family: 'Itim', cursive;
+    font-size: 27px;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>♡ Milky Mellow Cafe ♡</h1>
+    <p>SWEET MOMENTS, HAPPY DAYS</p>
+</header>
+
+<!-- CONTACT BANNER -->
+<section class="hero">
+    <small>WE ARE HERE FOR YOU</small>
+    <h2>Contact Us ♡</h2>
+    <p>
+        We'd love to hear from you.<br>
+        มาพูดคุยและติดต่อกับเราได้เลยนะ
+    </p>
+</section>
+
+<!-- CONTACT INFORMATION -->
+<section class="heading">
+    <h2>Get In Touch ♡</h2>
+    <p>ช่องทางติดต่อ Milky Mellow Cafe</p>
+</section>
+
+<div class="contact-container">
+
+    <div class="card">
+        <div class="icon">📍</div>
+        <h3>Our Location</h3>
+        <p>
+            ที่ตั้งร้าน<br>
+            (ใส่ที่อยู่ร้านของคุณ)
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">☎️</div>
+        <h3>Phone Number</h3>
+        <p>
+            โทรศัพท์<br>
+            (ใส่เบอร์โทรศัพท์)
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">📷</div>
+        <h3>Instagram</h3>
+        <p>
+            ติดตามรูปภาพและข่าวสาร<br>
+            <a href="https://www.instagram.com/" target="_blank">
+                Visit Instagram ♡
+            </a>
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="icon">💬</div>
+        <h3>Facebook</h3>
+        <p>
+            พูดคุยและสอบถามข้อมูล<br>
+            <a href="https://www.facebook.com/" target="_blank">
+                Visit Facebook ♡
+            </a>
+        </p>
+    </div>
+
+</div>
+
+<!-- OPENING TIME -->
+<section class="hours">
+    <h2>♡ Opening Hours ♡</h2>
+
+    <div class="hours-box">
+        <p>MONDAY - SUNDAY</p>
+        <p><strong>09:00 - 18:00</strong></p>
+        <p>Open Daily · Welcome Everyone!</p>
+    </div>
+</section>
+
+<!-- ENDING -->
+<section class="bottom">
+    <h2>See You Soon ♡</h2>
+    <p>
+        Thank you for visiting Milky Mellow Cafe.<br>
+        หวังว่าจะได้พบคุณที่ร้านของเรานะ
+    </p>
+</section>
+
+<footer>
+    <h2>♡ Milky Mellow Cafe ♡</h2>
+    <p>Sweet Moments, Happy Days</p>
+    <p>© 2026 Milky Mellow Cafe</p>
+</footer>
+
+</body>
+</html>

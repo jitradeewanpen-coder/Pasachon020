@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Milky Mellow Cafe</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f9fd;
+    color: #526f8d;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background: white;
+    text-align: center;
+    padding: 22px;
+}
+
+header h1 {
+    color: #739fc9;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #9bb8d3;
+    margin-top: 7px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #dcecff;
+    padding: 15px 8px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #6385a7;
+    background: white;
+    padding: 12px 21px;
+    margin: 4px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #79a7d1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg,#dceeff,#f4f9ff,#e7f2fc);
+    text-align: center;
+    padding: 75px 20px 65px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "✧";
+    position: absolute;
+    left: 12%;
+    top: 25px;
+    font-size: 60px;
+    color: white;
+}
+
+.hero::after {
+    content: "♡";
+    position: absolute;
+    right: 13%;
+    bottom: 25px;
+    font-size: 65px;
+    color: #a9c9e7;
+}
+
+.hero small {
+    color: #83a9cd;
+    letter-spacing: 5px;
+    font-size: 13px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    color: #648db6;
+    margin: 18px 0;
+}
+
+.hero p {
+    line-height: 2;
+    color: #829db8;
+    font-size: 16px;
+}
+
+.hero-line {
+    width: 65px;
+    height: 4px;
+    border-radius: 10px;
+    background: #8db4da;
+    margin: 22px auto;
+}
+
+/* INTRODUCTION */
+.story {
+    max-width: 1050px;
+    margin: 65px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.story-image {
+    position: relative;
+}
+
+.story-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 130px 20px 130px 20px;
+    box-shadow: 12px 12px 0 #dcecff;
+}
+
+.story-text {
+    background: white;
+    padding: 38px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px #e0eaf5;
+}
+
+.story-text small {
+    color: #91b1d1;
+    letter-spacing: 3px;
+}
+
+.story-text h2 {
+    color: #628ab4;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.story-text p {
+    color: #819bb5;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.story-text .heart {
+    color: #9bbddd;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+/* GALLERY */
+.gallery-section {
+    background: #eaf4fd;
+    padding: 65px 20px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading small {
+    color: #8baecf;
+    letter-spacing: 4px;
+}
+
+.heading h2 {
+    color: #648db6;
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.heading p {
+    color: #91a9c2;
+}
+
+/* GALLERY GRID */
+.gallery {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.gallery-card {
+    background: white;
+    padding: 12px;
+    border-radius: 22px;
+    box-shadow: 0 8px 22px #d6e5f3;
+    transition: .35s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 14px 28px #c5d9ed;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: .4s;
+}
+
+.gallery-card:hover img {
+    filter: brightness(1.06);
+}
+
+.gallery-card h3 {
+    color: #638bb5;
+    text-align: center;
+    font-size: 18px;
+    margin: 16px 0 8px;
+}
+
+.gallery-card p {
+    color: #93a9c0;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+/* CONCEPT */
+.concept {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.concept h2 {
+    color: #648db6;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.concept > p {
+    color: #91a9c2;
+    margin-bottom: 35px;
+}
+
+.concept-list {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.concept-item {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 22px;
+    border: 1px solid #dceafa;
+    box-shadow: 0 6px 18px #e0eaf5;
+    transition: .3s;
+}
+
+.concept-item:hover {
+    background: #e7f3ff;
+    transform: translateY(-6px);
+}
+
+.concept-item span {
+    font-size: 35px;
+}
+
+.concept-item h3 {
+    color: #658db7;
+    margin: 15px 0 10px;
+}
+
+.concept-item p {
+    color: #91a9c2;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* QUOTE */
+.quote {
+    margin: 0 auto 65px;
+    max-width: 1000px;
+    background: linear-gradient(120deg,#d6eaff,#f0f7ff);
+    padding: 50px 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.quote h2 {
+    color: #628ab5;
+    font-size: 29px;
+}
+
+.quote p {
+    color: #809bb7;
+    margin-top: 15px;
+    line-height: 2;
+}
+
+/* FOOTER */
+footer {
+    background: #b8d2eb;
+    text-align: center;
+    padding: 35px 15px;
+    color: white;
+    line-height: 2;
+}
+
+footer h2 {
+    color: white;
+    font-size: 27px;
+}
+
+/* MOBILE */
+@media(max-width:800px) {
+    .story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+
+    .gallery-card img {
+        height: 300px;
+    }
+
+    .concept-list {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>♡ Milky Mellow Cafe ♡</h1>
+    <p>Sweet Moments, Happy Days</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+    <a href="index.html">⌂ HOME</a>
+    <a href="menu.html">☕ MENU</a>
+    <a href="about.html" class="active">♡ ABOUT</a>
+    <a href="promotion.html">🎁 PROMOTION</a>
+    <a href="contact.html">✉ CONTACT</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+    <small>WELCOME TO OUR LITTLE WORLD</small>
+
+    <h2>About Our Cafe ♡</h2>
+
+    <div class="hero-line"></div>
+
+    <p>
+        A cozy place to relax and enjoy.<br>
+        พื้นที่เล็ก ๆ ที่เต็มไปด้วยความสุขและความอบอุ่น
+    </p>
+
+</section>
+
+<!-- STORY -->
+<section class="story">
+
+    <div class="story-image">
+        <img src="images/store.jpg" alt="Milky Mellow Outdoor">
+    </div>
+
+    <div class="story-text">
+
+        <small>OUR LITTLE STORY</small>
+
+        <h2>A Place Made With Love</h2>
+
+        <p>
+            Milky Mellow Cafe เป็นคาเฟ่ที่ออกแบบ
+            ด้วยความตั้งใจให้เป็นพื้นที่พักผ่อน
+            ที่มีบรรยากาศสบาย ๆ และเป็นกันเอง
+        </p>
+
+        <p>
+            เราอยากให้ทุกคนได้ใช้เวลาพิเศษ
+            ไปกับเครื่องดื่มและขนมแสนอร่อย
+            พร้อมเก็บความทรงจำดี ๆ กลับบ้าน
+        </p>
+
+        <div class="heart">♡ ♡ ♡</div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+
+    <div class="heading">
+
+        <small>OUR CAFE ATMOSPHERE</small>
+
+        <h2>Explore Our Space ♡</h2>
+
+        <p>มุมโปรดและบรรยากาศภายในร้านของเรา</p>
+
+    </div>
+
+    <div class="gallery">
+
+        <div class="gallery-card">
+
+            <img src="images/store.jpg" alt="Outdoor Zone">
+
+            <h3>Outdoor Zone</h3>
+
+            <p>มุมพักผ่อนรับบรรยากาศสบาย ๆ</p>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/shop.jpg" alt="Relaxing Corner">
+
+            <h3>Relaxing Corner</h3>
+
+            <p>มุมนั่งเล่นแสนอบอุ่น</p>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/cashier.jpg" alt="Cafe Counter">
+
+            <h3>Our Cafe Counter</h3>
+
+            <p>เคาน์เตอร์คาเฟ่สไตล์มินิมอล</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONCEPT -->
+<section class="concept">
+
+    <h2>♡ Why Milky Mellow?</h2>
+
+    <p>ความพิเศษเล็ก ๆ ที่เราอยากส่งต่อให้คุณ</p>
+
+    <div class="concept-list">
+
+        <div class="concept-item">
+
+            <span>☁️</span>
+
+            <h3>Cozy Atmosphere</h3>
+
+            <p>
+                บรรยากาศผ่อนคลาย
+                เหมาะกับการพักผ่อน
+            </p>
+
+        </div>
+
+        <div class="concept-item">
+
+            <span>🩵</span>
+
+            <h3>Lovely Design</h3>
+
+            <p>
+                ตกแต่งร้านในโทนสีฟ้า
+                สบายตาและอบอุ่น
+            </p>
+
+        </div>
+
+        <div class="concept-item">
+
+            <span>☕</span>
+
+            <h3>Happy Moments</h3>
+
+            <p>
+                เติมเต็มวันธรรมดา
+                ให้เป็นวันพิเศษ
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENDING -->
+<section class="quote">
+
+    <h2>Thank You for Being Here ♡</h2>
+
+    <p>
+        We hope you enjoy every moment with us.<br>
+        หวังว่าคุณจะมีความสุขทุกครั้งที่มาเยือน
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>♡ Milky Mellow Cafe ♡</h2>
+
+    <p>Sweet Moments, Happy Days</p>
+
+    <p>Thank you for visiting our little cafe.</p>
+
+    <p>© 2026 Milky Mellow Cafe</p>
+
+</footer>
+
+</body>
+</html>
